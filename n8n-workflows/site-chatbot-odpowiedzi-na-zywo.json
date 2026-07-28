@@ -2,7 +2,7 @@
   "name": "STFS — Chatbot strony — odpowiedzi na żywo (webhook)",
   "nodes": [
     {
-      "id": "3c14c6a6-2429-4eed-93e5-577e7b53767f",
+      "id": "30500195-0e97-4189-8d8c-61e05f4ac9e8",
       "name": "Notatka: konfiguracja",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
@@ -18,7 +18,7 @@
       }
     },
     {
-      "id": "d76b13c4-2361-4745-9011-44301575c129",
+      "id": "1e38b55d-3e34-40ea-9d41-4f0248e9001e",
       "name": "Webhook: pytanie od widgetu",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
@@ -34,7 +34,7 @@
       }
     },
     {
-      "id": "d6037fe3-ac26-4105-b0da-1a26ae1d2fb0",
+      "id": "42e00b57-e727-4d27-9cdf-70b18c1667f9",
       "name": "Zbuduj prompt",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -43,11 +43,11 @@
         300
       ],
       "parameters": {
-        "jsCode": "const KNOWLEDGE_BASE = \"O STFS: STFS to zespół inżynierów, projektantów i specjalistów AI. Wdrażamy automatyzacje, strony internetowe i wsparcie marketingu oparte na danych. Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami przenoszącymi procesy na AI.\\n\\nUsługa — Automatyzacje AI: Łączymy narzędzia firmy i modele językowe w procesy, które same kwalifikują leady, odpowiadają na zapytania i aktualizują dane bez udziału zespołu. Obejmuje: kwalifikację i scoring leadów, automatyczne odpowiedzi i follow-up, integracje CRM/e-mail/kalendarz.\\n\\nUsługa — Strony internetowe: Projektujemy i wdrażamy strony, które startują szybko, konwertują ruch i nie zabierają zespołowi tygodni na wdrażanie zmian. Obejmuje: landing page pod kampanie, panel do samodzielnej edycji treści, wdrożenie w 2 do 4 tygodni.\\n\\nUsługa — Wsparcie marketingu: Automatyzujemy raportowanie kampanii, generujemy treści z pomocą AI i optymalizujemy lejek sprzedażowy na podstawie danych. Obejmuje: automatyczne raporty kampanii, generowanie treści z AI, optymalizację lejków sprzedażowych.\\n\\nUsługa — Startupy dla firm: Pomagamy firmom uruchamiać nowe przedsięwzięcia z AI od pierwszej wersji produktu — od walidacji pomysłu po pierwszych klientów. Obejmuje: walidację pomysłu i MVP w tygodnie, AI wbudowane od pierwszej wersji, wsparcie w pozyskaniu klientów.\\n\\nProces współpracy: 1) Konsultacja — darmowa, 30-minutowa rozmowa ustalająca cele i zakres. 2) Diagnoza i plan — audyt strony/procesów/danych. 3) Wdrożenie — budowa strony/automatyzacji z cotygodniowym podglądem postępu. 4) Skalowanie — po starcie mierzymy dane i dokładamy kolejne automatyzacje AI.\\n\\nModele współpracy: Projekt jednorazowy (konkretny zakres, jeden cel, wycena stała po konsultacji) — dla jednego celu. Stała opieka (comiesięczne wsparcie rozwoju: nowe automatyzacje, optymalizacje, marketing w jednym abonamencie) — najczęściej wybierane. Partnerstwo wzrostowe (długoterminowa współpraca z elastycznym zakresem) — dla startupów i firm skalujących się.\\n\\nKonsultacja: Darmowa konsultacja trwa 30 minut i jest bezpłatna. Można ją zarezerwować online przez panel na stronie (kalendarz Cal.com), dostępne terminy to zwykle 12:00-18:00, z minimum 2-dniowym wyprzedzeniem. W konsultacji: analiza obecnej strony/procesów/kampanii, konkretne rekomendacje nawet bez dalszej współpracy, wstępna wycena i realny harmonogram.\\n\\nKontakt: e-mail hello@stfs.studio, telefon +48 500 100 200. Najlepszym pierwszym krokiem jest umówienie darmowej konsultacji przez stronę.\\n\\nTechnologie, których używa STFS: GPT-4o, Claude, LangChain, n8n, Make, Zapier, Next.js, Supabase, bazy wektorowe.\";\n\nconst systemPrompt = \"Jesteś asystentem AI na stronie STFS (AI studio dla biznesu). Odpowiadaj wyłącznie na podstawie poniższej wiedzy o STFS. Bądź zwięzły, konkretny, po polsku, przyjazny. Jeśli nie znasz odpowiedzi z tej wiedzy, powiedz to wprost i zaproponuj umówienie darmowej konsultacji przez stronę. Nigdy nie wymyślaj cen ani faktów, których nie ma w kontekście.\\n\\nWiedza o STFS:\\n\" + KNOWLEDGE_BASE;\n\nconst question = $json.body?.question || $json.question || '';\n\nreturn [{\n  json: {\n    ...$json,\n    question,\n    body: {\n      model: 'gpt-4o-mini',\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: question },\n      ],\n    },\n  },\n}];"
+        "jsCode": "const KNOWLEDGE_BASE = \"O STFS: STFS to zespół inżynierów, projektantów i specjalistów AI. Wdrażamy automatyzacje, strony internetowe i wsparcie marketingu oparte na danych. Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami przenoszącymi procesy na AI.\\n\\nUsługa — Automatyzacje AI: Łączymy narzędzia firmy i modele językowe w procesy, które same kwalifikują leady, odpowiadają na zapytania i aktualizują dane bez udziału zespołu. Obejmuje: kwalifikację i scoring leadów, automatyczne odpowiedzi i follow-up, integracje CRM/e-mail/kalendarz.\\n\\nUsługa — Strony internetowe: Projektujemy i wdrażamy strony, które startują szybko, konwertują ruch i nie zabierają zespołowi tygodni na wdrażanie zmian. Obejmuje: landing page pod kampanie, panel do samodzielnej edycji treści, wdrożenie w 2 do 4 tygodni.\\n\\nUsługa — Wsparcie marketingu: Automatyzujemy raportowanie kampanii, generujemy treści z pomocą AI i optymalizujemy lejek sprzedażowy na podstawie danych. Obejmuje: automatyczne raporty kampanii, generowanie treści z AI, optymalizację lejków sprzedażowych.\\n\\nUsługa — Startupy dla firm: Pomagamy firmom uruchamiać nowe przedsięwzięcia z AI od pierwszej wersji produktu — od walidacji pomysłu po pierwszych klientów. Obejmuje: walidację pomysłu i MVP w tygodnie, AI wbudowane od pierwszej wersji, wsparcie w pozyskaniu klientów.\\n\\nProces współpracy: 1) Konsultacja — darmowa, 30-minutowa rozmowa ustalająca cele i zakres. 2) Diagnoza i plan — audyt strony/procesów/danych. 3) Wdrożenie — budowa strony/automatyzacji z cotygodniowym podglądem postępu. 4) Skalowanie — po starcie mierzymy dane i dokładamy kolejne automatyzacje AI.\\n\\nModele współpracy: Projekt jednorazowy (konkretny zakres, jeden cel, wycena stała po konsultacji) — dla jednego celu. Stała opieka (comiesięczne wsparcie rozwoju: nowe automatyzacje, optymalizacje, marketing w jednym abonamencie) — najczęściej wybierane. Partnerstwo wzrostowe (długoterminowa współpraca z elastycznym zakresem) — dla startupów i firm skalujących się.\\n\\nKonsultacja: Darmowa konsultacja trwa 30 minut i jest bezpłatna. Można ją zarezerwować online przez panel na stronie (kalendarz Cal.com), dostępne terminy to zwykle 12:00-18:00, z minimum 2-dniowym wyprzedzeniem. W konsultacji: analiza obecnej strony/procesów/kampanii, konkretne rekomendacje nawet bez dalszej współpracy, wstępna wycena i realny harmonogram.\\n\\nKontakt: e-mail hello@stfs.studio, telefon +48 500 100 200. Najlepszym pierwszym krokiem jest umówienie darmowej konsultacji przez stronę.\\n\\nTechnologie, których używa STFS: GPT-4o, Claude, LangChain, n8n, Make, Zapier, Next.js, Supabase, bazy wektorowe.\";\n\nconst systemPrompt = \"Jesteś asystentem AI na stronie STFS (AI studio dla biznesu). Odpowiadaj wyłącznie na podstawie poniższej wiedzy o STFS. Bądź zwięzły, konkretny, po polsku, przyjazny. Jeśli nie znasz odpowiedzi z tej wiedzy, powiedz to wprost i zaproponuj umówienie darmowej konsultacji przez stronę. Nigdy nie wymyślaj cen ani faktów, których nie ma w kontekście.\\n\\nWiedza o STFS:\\n\" + KNOWLEDGE_BASE;\n\n// Nie prawdziwy sekret (ten sam string jest w publicznym script.js) — tylko odsiewa\n// przypadkowe boty/skanery i kopiowanie webhooka przez inne strony bez czytania kodu.\nconst CLIENT_KEY = 'stfs-site-widget-2026';\nconst headerKey = ($json.headers && $json.headers['x-stfs-client']) || '';\nconst authorized = headerKey === CLIENT_KEY;\n\nconst MAX_QUESTION_LENGTH = 500;\nlet question = ($json.body?.question || $json.question || '').toString().slice(0, MAX_QUESTION_LENGTH);\nif (!authorized) {\n  // Nie blokujemy w 100% (to i tak trafi do API), ale nieautoryzowane zapytania\n  // dostają tanią, generyczną odpowiedź zamiast dowolnego, kosztownego promptu.\n  question = 'Przywitaj się krótko i zaproponuj kontakt przez formularz konsultacji.';\n}\n\nreturn [{\n  json: {\n    ...$json,\n    question,\n    body: {\n      model: 'gpt-4o-mini',\n      max_tokens: 400,\n      messages: [\n        { role: 'system', content: systemPrompt },\n        { role: 'user', content: question },\n      ],\n    },\n  },\n}];"
       }
     },
     {
-      "id": "743b2993-f9ac-441b-87b2-a0f67e2b0a07",
+      "id": "9d510ba1-52b0-45cc-931b-66f559ec53f7",
       "name": "AI: wygeneruj odpowiedź",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
@@ -66,7 +66,7 @@
       "notes": "Podmień na swojego dostawcę modelu (OpenAI/Claude) + klucz API w Headers."
     },
     {
-      "id": "545bd279-e96c-4c6d-8cae-7baf1c176043",
+      "id": "f59e6a91-c068-416d-94cb-8c490e2e3a8e",
       "name": "Wyodrębnij odpowiedź",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -79,7 +79,7 @@
       }
     },
     {
-      "id": "568043ff-f01c-4fd8-926a-fb1968131688",
+      "id": "f0c9ee66-20cc-4977-9c6c-8939e0797657",
       "name": "Zwróć odpowiedź do widgetu",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,

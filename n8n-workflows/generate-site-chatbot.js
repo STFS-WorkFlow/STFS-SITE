@@ -101,7 +101,19 @@ const KNOWLEDGE_BASE = ${JSON.stringify(knowledgeBase)};
 
 const systemPrompt = "Jesteś asystentem AI na stronie STFS (AI studio dla biznesu). Odpowiadaj wyłącznie na podstawie poniższej wiedzy o STFS. Bądź zwięzły, konkretny, po polsku, przyjazny. Jeśli nie znasz odpowiedzi z tej wiedzy, powiedz to wprost i zaproponuj umówienie darmowej konsultacji przez stronę. Nigdy nie wymyślaj cen ani faktów, których nie ma w kontekście.\\n\\nWiedza o STFS:\\n" + KNOWLEDGE_BASE;
 
-const question = $json.body?.question || $json.question || '';
+// Nie prawdziwy sekret (ten sam string jest w publicznym script.js) — tylko odsiewa
+// przypadkowe boty/skanery i kopiowanie webhooka przez inne strony bez czytania kodu.
+const CLIENT_KEY = 'stfs-site-widget-2026';
+const headerKey = ($json.headers && $json.headers['x-stfs-client']) || '';
+const authorized = headerKey === CLIENT_KEY;
+
+const MAX_QUESTION_LENGTH = 500;
+let question = ($json.body?.question || $json.question || '').toString().slice(0, MAX_QUESTION_LENGTH);
+if (!authorized) {
+  // Nie blokujemy w 100% (to i tak trafi do API), ale nieautoryzowane zapytania
+  // dostają tanią, generyczną odpowiedź zamiast dowolnego, kosztownego promptu.
+  question = 'Przywitaj się krótko i zaproponuj kontakt przez formularz konsultacji.';
+}
 
 return [{
   json: {
@@ -109,6 +121,7 @@ return [{
     question,
     body: {
       model: 'gpt-4o-mini',
+      max_tokens: 400,
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: question },

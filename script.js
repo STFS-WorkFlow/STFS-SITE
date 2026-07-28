@@ -286,9 +286,14 @@ if (reduceMotion) {
     }, 15);
   }
 
+  const MAX_QUESTION_LENGTH = 500;
+  // Not a real secret (visible in page source) — just enough friction to stop
+  // naive scanners/bots and casual reuse of the webhook from other sites.
+  const WIDGET_CLIENT_KEY = 'stfs-site-widget-2026';
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const question = input.value.trim();
+    const question = input.value.trim().slice(0, MAX_QUESTION_LENGTH);
     if (!question) return;
 
     addMessage(question, 'user');
@@ -310,7 +315,10 @@ if (reduceMotion) {
     try {
       const res = await fetch(N8N_CHAT_WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Stfs-Client': WIDGET_CLIENT_KEY,
+        },
         body: JSON.stringify({ question }),
       });
       if (!res.ok) throw new Error('bad status');

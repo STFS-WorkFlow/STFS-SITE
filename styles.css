@@ -539,10 +539,10 @@ section{padding:88px 0}
   display:flex;flex-direction:column;gap:22px;
   box-shadow:0 30px 80px -30px rgba(0,0,0,0.6);
 }
-.booking-card--cal{padding:12px}
-.cal-inline{width:100%;min-height:720px}
+.booking-card--cal{padding:12px;overflow:visible}
+.cal-inline{width:100%;min-height:850px;overflow:visible}
 @media (min-width:1024px){
-  .cal-inline{min-height:760px}
+  .cal-inline{min-height:900px}
 }
 
 @media (min-width:1024px){
