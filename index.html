@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STFS — AI Studio | Automatyzacje, strony internetowe i marketing dla firm</title>
+<meta name="description" content="STFS to studio AI, które buduje automatyzacje, strony internetowe, wsparcie marketingu i startupy dla firm. Umów darmową, 30-minutową konsultację.">
+<link rel="icon" href="logo_stfs.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="grain"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="STFS, strona główna">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">STFS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#onas">O nas</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#jak-to-dziala">Jak to działa</a>
+      <a href="#wspolpraca">Współpraca</a>
+      <a href="#konsultacja">Konsultacja</a>
+    </nav>
+    <a href="#konsultacja" class="btn btn-primary btn-nav">Umów konsultację</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#onas">O nas</a>
+    <a href="#uslugi">Usługi</a>
+    <a href="#wspolpraca">Współpraca</a>
+    <a href="#konsultacja">Konsultacja</a>
+    <a href="#konsultacja" class="btn btn-primary">Umów konsultację</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="network" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow"><i class="ph ph-sparkle"></i> AI STUDIO DLA BIZNESU</span>
+        <h1 class="hero-title">Sztuczna inteligencja, która realnie pracuje na wynik Twojej firmy.</h1>
+        <p class="hero-sub">STFS łączy automatyzacje AI, nowoczesne strony internetowe i wsparcie marketingu, żeby Twój zespół skalował się bez dokładania rąk do pracy.</p>
+        <div class="hero-cta">
+          <a href="#konsultacja" class="btn btn-primary btn-lg">Umów darmową konsultację</a>
+          <a href="#uslugi" class="btn btn-ghost btn-lg">Zobacz usługi</a>
+        </div>
+        <div class="hero-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Wolne terminy konsultacji w tym tygodniu
+        </div>
+      </div>
+
+      <div class="hero-demo reveal">
+        <div class="terminal">
+          <div class="terminal-head">
+            <span class="term-dot term-dot-r"></span><span class="term-dot term-dot-y"></span><span class="term-dot term-dot-g"></span>
+            <span class="terminal-title"><i class="ph ph-robot"></i> stfs-ai-agent — live</span>
+          </div>
+          <div class="terminal-body" id="termBody" aria-live="polite"></div>
+        </div>
+        <div class="floating-badge floating-badge-1"><i class="ph ph-lightning"></i> Agent AI 24/7 online</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- O NAS -->
+  <section class="about" id="onas">
+    <div class="section-inner about-inner">
+      <div class="about-copy">
+        <span class="eyebrow reveal"><i class="ph ph-terminal"></i> O NAS</span>
+        <h2 class="section-title reveal">Budujemy most między Twoim biznesem a sztuczną inteligencją.</h2>
+        <p class="about-text reveal">Jesteśmy zespołem inżynierów, projektantów i specjalistów AI. Zamiast sprzedawać modne słowa, wdrażamy konkretne rozwiązania: automatyzacje, które przejmują powtarzalną pracę, strony, które realnie konwertują, i wsparcie marketingu oparte na danych, nie domysłach.</p>
+        <p class="about-text reveal">Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami, które chcą przenieść swoje procesy na AI bez ryzyka i chaosu wdrożeniowego.</p>
+      </div>
+      <div class="about-visual reveal" aria-hidden="true">
+        <div class="ai-core">
+          <span class="ai-ring ai-ring-1"></span>
+          <span class="ai-ring ai-ring-2"></span>
+          <span class="ai-ring ai-ring-3"></span>
+          <span class="ai-core-logo" aria-hidden="true"></span>
+          <span class="ai-tag ai-tag-1">AI</span>
+          <span class="ai-tag ai-tag-2">WEB</span>
+          <span class="ai-tag ai-tag-3">GROWTH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="uslugi">
+    <div class="section-inner">
+      <span class="eyebrow reveal"><i class="ph ph-squares-four"></i> USŁUGI</span>
+      <h2 class="section-title reveal">Cztery obszary, jeden zespół.</h2>
+      <div class="services-grid services-grid--4">
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-flow-arrow"></i></div>
+          <h3>Automatyzacje AI</h3>
+          <p>Łączymy Twoje narzędzia i modele językowe w procesy, które same kwalifikują leady, odpowiadają na zapytania i aktualizują dane bez udziału zespołu.</p>
+          <ul class="service-list">
+            <li>Kwalifikacja i scoring leadów</li>
+            <li>Automatyczne odpowiedzi i follow-up</li>
+            <li>Integracje CRM, e-mail, kalendarz</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-browser"></i></div>
+          <h3>Strony internetowe</h3>
+          <p>Projektujemy i wdrażamy strony, które startują szybko, konwertują ruch i nie zabierają zespołowi tygodni na wdrażanie zmian.</p>
+          <ul class="service-list">
+            <li>Landing page pod kampanie i launch</li>
+            <li>Panel do samodzielnej edycji treści</li>
+            <li>Wdrożenie w 2 do 4 tygodni</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-chart-line-up"></i></div>
+          <h3>Wsparcie marketingu</h3>
+          <p>Automatyzujemy raportowanie kampanii, generujemy treści z pomocą AI i optymalizujemy lejek sprzedażowy na podstawie realnych danych.</p>
+          <ul class="service-list">
+            <li>Automatyczne raporty kampanii</li>
+            <li>Generowanie treści z AI</li>
+            <li>Optymalizacja lejków sprzedażowych</li>
+          </ul>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-rocket-launch"></i></div>
+          <h3>Startupy dla firm</h3>
+          <p>Pomagamy firmom uruchamiać nowe przedsięwzięcia z AI od pierwszej wersji produktu — od walidacji pomysłu po pierwszych klientów.</p>
+          <ul class="service-list">
+            <li>Walidacja pomysłu i MVP w tygodnie</li>
+            <li>AI wbudowane od pierwszej wersji</li>
+            <li>Wsparcie w pozyskaniu klientów</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW DEMO -->
+  <section class="workflow" id="jak-to-dziala">
+    <div class="section-inner">
+      <span class="eyebrow reveal"><i class="ph ph-play-circle"></i> NA ŻYWO</span>
+      <h2 class="section-title reveal">Zobacz automatyzację w akcji.</h2>
+      <div class="flow reveal" id="flowDemo">
+        <div class="flow-node active" data-step="0"><i class="ph ph-user-circle"></i><span>Nowy lead</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node" data-step="1"><i class="ph ph-robot"></i><span>AI kwalifikuje</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node" data-step="2"><i class="ph ph-database"></i><span>Aktualizacja CRM</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node" data-step="3"><i class="ph ph-envelope-simple"></i><span>Follow-up e-mail</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node" data-step="4"><i class="ph ph-calendar-check"></i><span>Konsultacja w kalendarzu</span></div>
+      </div>
+      <p class="flow-caption reveal" id="flowCaption" role="status" aria-live="polite">Nowy lead trafia do systemu i czeka na kwalifikację.</p>
+    </div>
+  </section>
+
+  <!-- WSPÓŁPRACA -->
+  <section class="collab" id="wspolpraca">
+    <div class="section-inner">
+      <span class="eyebrow reveal"><i class="ph ph-handshake"></i> WSPÓŁPRACA</span>
+      <h2 class="section-title reveal">Jak wygląda współpraca z nami.</h2>
+      <div class="process-line">
+        <div class="process-step reveal">
+          <span class="process-node">01</span>
+          <h3>Konsultacja</h3>
+          <p>Darmowa, 30-minutowa rozmowa, w której ustalamy cele, zakres i to, czy w ogóle ma to sens.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-node">02</span>
+          <h3>Diagnoza i plan</h3>
+          <p>Audytujemy stronę, procesy i dane, żeby wiedzieć, co realnie skraca czas do wyniku.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-node">03</span>
+          <h3>Wdrożenie</h3>
+          <p>Budujemy stronę, automatyzacje lub kampanię równolegle, z cotygodniowym podglądem postępu.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-node">04</span>
+          <h3>Skalowanie</h3>
+          <p>Po starcie mierzymy dane i dokładamy kolejne automatyzacje AI tam, gdzie zespół traci najwięcej czasu.</p>
+        </div>
+      </div>
+
+      <div class="collab-models">
+        <article class="collab-card reveal">
+          <span class="collab-tag">Najlepsze dla jednego celu</span>
+          <h3>Projekt jednorazowy</h3>
+          <p>Konkretny zakres, jeden cel — nowa strona, wdrożenie automatyzacji lub kampania startowa. Wycena stała, ustalona po konsultacji.</p>
+        </article>
+        <article class="collab-card collab-card--accent reveal">
+          <span class="collab-tag">Najczęściej wybierane</span>
+          <h3>Stała opieka</h3>
+          <p>Comiesięczne wsparcie rozwoju: nowe automatyzacje, optymalizacje strony i bieżące wsparcie marketingu w jednym abonamencie.</p>
+        </article>
+        <article class="collab-card reveal">
+          <span class="collab-tag">Dla firm skalujących się</span>
+          <h3>Partnerstwo wzrostowe</h3>
+          <p>Dla startupów i firm budujących nowe produkty z AI — długoterminowa współpraca z elastycznym zakresem prac.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONSULTACJA / BOOKING -->
+  <section class="booking" id="konsultacja">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="section-inner booking-inner">
+      <div class="booking-copy reveal">
+        <span class="eyebrow"><i class="ph ph-calendar-check"></i> DARMOWA KONSULTACJA</span>
+        <h2>Umów darmową, 30-minutową konsultację.</h2>
+        <p>Porozmawiajmy o Twoim projekcie — bez zobowiązań i bez sprzedażowego tonu. Wychodzimy z konkretnym planem działania.</p>
+        <ul class="booking-includes">
+          <li><i class="ph ph-check-circle"></i> Analiza obecnej strony, procesów lub kampanii</li>
+          <li><i class="ph ph-check-circle"></i> Konkretne rekomendacje, nawet jeśli nie zaczniemy współpracy</li>
+          <li><i class="ph ph-check-circle"></i> Wstępna wycena i realny harmonogram</li>
+        </ul>
+        <a class="cta-email" href="mailto:hello@stfs.studio">hello@stfs.studio</a>
+      </div>
+
+      <div class="booking-card booking-card--cal reveal">
+        <div id="cal-inline" class="cal-inline"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">STFS</span>
+      </div>
+      <p>AI studio dla biznesu. Automatyzacje, strony internetowe, wsparcie marketingu i startupy dla firm, które nie chcą tracić czasu na powtarzalną pracę.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <span class="footer-heading">Nawigacja</span>
+        <a href="#onas">O nas</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#jak-to-dziala">Jak to działa</a>
+        <a href="#wspolpraca">Współpraca</a>
+        <a href="#konsultacja">Konsultacja</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-heading">Kontakt</span>
+        <a href="mailto:hello@stfs.studio">hello@stfs.studio</a>
+        <a href="tel:+48500100200">+48 500 100 200</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-heading">Prawne</span>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      </div>
+    </div>
+  </div>
+  <div class="section-inner footer-bottom">
+    <span>© 2026 STFS Studio · <a href="polityka-prywatnosci.html">Polityka prywatności</a></span>
+    <div class="footer-social">
+      <a href="#" aria-label="STFS na LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+      <a href="#" aria-label="STFS na X"><i class="ph ph-x-logo"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Asystent AI STFS" aria-hidden="true">
+    <div class="chat-head">
+      <span class="chat-head-avatar" aria-hidden="true"></span>
+      <div class="chat-head-text">
+        <span class="chat-head-title">Asystent STFS</span>
+        <span class="chat-head-status"><span class="status-dot" aria-hidden="true"></span> Online 24/7</span>
+      </div>
+      <button type="button" class="chat-close" id="chatClose" aria-label="Zamknij czat"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg ai">Cześć! Jestem asystentem AI STFS. Zapytaj mnie o nasze usługi, proces współpracy albo umówienie darmowej konsultacji.</div>
+    </div>
+    <form class="chat-input-row" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Napisz wiadomość…" autocomplete="off" required>
+      <button type="submit" class="chat-send" aria-label="Wyślij"><i class="ph ph-arrow-up"></i></button>
+    </form>
+  </div>
+  <button type="button" class="chat-toggle" id="chatToggle" aria-label="Otwórz czat z asystentem AI">
+    <i class="ph ph-chat-circle-dots" id="chatToggleIconOpen"></i>
+    <i class="ph ph-x" id="chatToggleIconClose" style="display:none"></i>
+  </button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement('script')).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === 'string') {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ['initNamespace', namespace]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+  Cal('init', '30min', { origin: 'https://cal.com' });
+
+  Cal.ns['30min']('inline', {
+    elementOrSelector: '#cal-inline',
+    calLink: 'kamil-piechota-se8qxt/30min',
+    config: { layout: 'month_view', theme: 'dark' },
+  });
+
+  Cal.ns['30min']('ui', {
+    theme: 'dark',
+    cssVarsPerTheme: {
+      dark: { 'cal-brand': '#35e0c1' },
+      light: { 'cal-brand': '#35e0c1' },
+    },
+    hideEventTypeDetails: false,
+    layout: 'month_view',
+  });
+</script>
+</body>
+</html>
