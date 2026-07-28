@@ -306,7 +306,7 @@ if (reduceMotion) {
       pending.classList.remove('pending');
       typeMessage(
         pending,
-        'Asystent AI startuje wkrótce — w międzyczasie napisz do nas na hello@stfs.studio albo umów darmową konsultację.',
+        'Asystent AI startuje wkrótce — w międzyczasie napisz do nas na kontakt@stfs.pl albo umów darmową konsultację.',
         () => (sendBtn.disabled = false)
       );
       return;
@@ -326,14 +326,14 @@ if (reduceMotion) {
       pending.classList.remove('pending');
       typeMessage(
         pending,
-        data.answer || 'Nie udało się wygenerować odpowiedzi. Napisz do nas na hello@stfs.studio.',
+        data.answer || 'Nie udało się wygenerować odpowiedzi. Napisz do nas na kontakt@stfs.pl.',
         () => (sendBtn.disabled = false)
       );
     } catch (err) {
       pending.classList.remove('pending');
       typeMessage(
         pending,
-        'Asystent jest chwilowo niedostępny. Napisz do nas na hello@stfs.studio.',
+        'Asystent jest chwilowo niedostępny. Napisz do nas na kontakt@stfs.pl.',
         () => (sendBtn.disabled = false)
       );
     }
