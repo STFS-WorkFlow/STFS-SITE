@@ -75,7 +75,7 @@ function buildWorkflow({ fileName, name, setupNote, nodes, noteWidth, noteHeight
    ========================================================= */
 
 const knowledgeBase = `
-O STFS: STFS to zespół inżynierów, projektantów i specjalistów AI. Wdrażamy automatyzacje, strony internetowe i wsparcie marketingu oparte na danych. Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami przenoszącymi procesy na AI.
+O STFS: Pracujemy bezpośrednio z klientem, bez warstwy pośredników. Łączymy sprzedaż, strategię i wdrożenia AI w jednym procesie. Zamiast sprzedawać modne słowa, budujemy konkretne rozwiązania: automatyzacje, które przejmują powtarzalną pracę, strony, które realnie konwertują, i wsparcie marketingu oparte na danych, nie na domysłach. Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami, które chcą przenieść swoje procesy na AI bez ryzyka i chaosu wdrożeniowego — z pełną odpowiedzialnością za efekt na każdym etapie.
 
 Usługa — Automatyzacje AI: Łączymy narzędzia firmy i modele językowe w procesy, które same kwalifikują leady, odpowiadają na zapytania i aktualizują dane bez udziału zespołu. Obejmuje: kwalifikację i scoring leadów, automatyczne odpowiedzi i follow-up, integracje CRM/e-mail/kalendarz.
 
