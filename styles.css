@@ -243,7 +243,7 @@ input,textarea{font:inherit;color:inherit}
 }
 .terminal-title i{color:var(--accent)}
 .terminal-body{
-  padding:22px 20px;min-height:260px;
+  padding:22px 20px;height:260px;overflow-y:auto;
   display:flex;flex-direction:column;gap:14px;
   font-family:var(--font-mono);font-size:13.5px;line-height:1.6;
 }
@@ -678,7 +678,7 @@ section{padding:88px 0}
 }
 .chat-input-row input{
   flex:1;background:var(--bg-elevated);border:1px solid var(--border-strong);
-  border-radius:var(--radius-pill);padding:10px 16px;font-size:13.5px;color:var(--text-primary);
+  border-radius:var(--radius-pill);padding:10px 16px;font-size:16px;color:var(--text-primary);
   transition:border-color 0.2s var(--ease);
 }
 .chat-input-row input::placeholder{color:var(--text-tertiary)}

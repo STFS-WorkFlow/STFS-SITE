@@ -105,11 +105,31 @@ if (reduceMotion) {
 
   if (!reduceMotion) {
     resize();
-    step();
+    // Only run the (O(n^2) per frame) animation loop while the canvas is
+    // actually visible — it was previously running forever in the
+    // background even after scrolling past the hero, wasting CPU/GPU on
+    // every frame for the rest of the page's lifetime (a real cause of
+    // mobile jank/slowness).
+    let isVisible = false;
+
+    const io = new IntersectionObserver((entries) => {
+      isVisible = entries[0].isIntersecting;
+      if (isVisible && animId === null) {
+        step();
+      } else if (!isVisible && animId !== null) {
+        cancelAnimationFrame(animId);
+        animId = null;
+      }
+    });
+    io.observe(canvas);
+
     window.addEventListener('resize', () => {
-      cancelAnimationFrame(animId);
+      if (animId !== null) {
+        cancelAnimationFrame(animId);
+        animId = null;
+      }
       resize();
-      step();
+      if (isVisible) step();
     });
   } else {
     resize();
