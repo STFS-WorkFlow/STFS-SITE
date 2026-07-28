@@ -124,11 +124,12 @@ if (reduceMotion) {
   if (!body) return;
 
   const script = [
-    { who: 'user', text: 'Cześć, interesuje mnie automatyzacja obsługi leadów.' },
-    { who: 'ai', text: 'Sprawdzam Twój lejek sprzedażowy... wykryto 3 miejsca do automatyzacji.' },
-    { who: 'ai', text: 'Rekomendacja: kwalifikacja leadów + automatyczny follow-up. Oszczędność: ok. 12h/tydzień.' },
-    { who: 'user', text: 'Ile czasu zajmie wdrożenie?' },
-    { who: 'ai', text: 'Pierwsza wersja: 5–7 dni roboczych. Umówić darmową konsultację?' },
+    { who: 'user', text: 'Cześć, jakie usługi oferuje STFS?' },
+    { who: 'ai', text: 'Cztery obszary: automatyzacje AI, strony internetowe, wsparcie marketingu i startupy dla firm.' },
+    { who: 'user', text: 'Ile trwa i kosztuje konsultacja?' },
+    { who: 'ai', text: '30 minut, całkowicie za darmo — bez zobowiązań.' },
+    { who: 'user', text: 'Jak umówić termin?' },
+    { who: 'ai', text: 'Wybierz dzień i godzinę w panelu rezerwacji poniżej — potwierdzenie przyjdzie mailem.' },
   ];
 
   if (reduceMotion) {
