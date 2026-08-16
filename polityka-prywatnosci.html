@@ -10,10 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 </noscript>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -139,19 +137,19 @@
         <span class="chat-head-title">Asystent STFS</span>
         <span class="chat-head-status"><span class="status-dot" aria-hidden="true"></span> Online 24/7</span>
       </div>
-      <button type="button" class="chat-close" id="chatClose" aria-label="Zamknij czat"><i class="ph ph-x"></i></button>
+      <button type="button" class="chat-close" id="chatClose" aria-label="Zamknij czat"><svg class="icon" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
     </div>
     <div class="chat-body" id="chatBody">
       <div class="chat-msg ai">Cześć! Jestem asystentem AI STFS. Zapytaj mnie o nasze usługi, proces współpracy albo umówienie darmowej konsultacji.</div>
     </div>
     <form class="chat-input-row" id="chatForm">
       <input type="text" id="chatInput" placeholder="Napisz wiadomość…" autocomplete="off" maxlength="500" required>
-      <button type="submit" class="chat-send" aria-label="Wyślij"><i class="ph ph-arrow-up"></i></button>
+      <button type="submit" class="chat-send" aria-label="Wyślij"><svg class="icon" viewBox="0 0 256 256"><path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/></svg></button>
     </form>
   </div>
   <button type="button" class="chat-toggle" id="chatToggle" aria-label="Otwórz czat z asystentem AI">
-    <i class="ph ph-chat-circle-dots" id="chatToggleIconOpen"></i>
-    <i class="ph ph-x" id="chatToggleIconClose" style="display:none"></i>
+    <svg class="icon" id="chatToggleIconOpen" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"/></svg>
+    <svg class="icon" id="chatToggleIconClose" style="display:none" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
   </button>
 </div>
 

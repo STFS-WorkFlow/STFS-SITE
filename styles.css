@@ -23,6 +23,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.icon{width:1em;height:1em;display:inline-block;flex:none;vertical-align:-0.125em;fill:currentColor}
 html{scroll-behavior:smooth}
 body{
   background:var(--bg);
@@ -241,7 +242,7 @@ input,textarea{font:inherit;color:inherit}
   margin-left:8px;font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);
   display:flex;align-items:center;gap:6px;
 }
-.terminal-title i{color:var(--accent)}
+.terminal-title svg{color:var(--accent)}
 .terminal-body{
   padding:22px 20px;height:260px;overflow-y:auto;
   display:flex;flex-direction:column;gap:14px;
@@ -272,7 +273,7 @@ input,textarea{font:inherit;color:inherit}
   box-shadow:0 16px 40px -18px rgba(0,0,0,0.7);
   animation:float-badge 5s ease-in-out infinite;
 }
-.floating-badge i{color:var(--accent);font-size:15px}
+.floating-badge svg{color:var(--accent);font-size:15px}
 .floating-badge-1{top:-16px;right:20px;animation-delay:0s}
 @keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @media (prefers-reduced-motion: reduce){
@@ -523,7 +524,7 @@ section{padding:88px 0}
   display:flex;align-items:flex-start;gap:10px;
   color:var(--text-secondary);font-size:14.5px;line-height:1.5;
 }
-.booking-includes i{color:var(--accent);font-size:18px;flex:none;margin-top:1px}
+.booking-includes svg{color:var(--accent);font-size:18px;flex:none;margin-top:1px}
 
 .booking-card{
   position:relative;z-index:1;
