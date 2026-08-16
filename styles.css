@@ -568,9 +568,6 @@ section{padding:88px 0}
 }
 .footer-bottom a{color:var(--text-tertiary);transition:color 0.2s var(--ease)}
 .footer-bottom a:hover{color:var(--accent)}
-.footer-social{display:flex;gap:16px}
-.footer-social a{font-size:17px;color:var(--text-secondary);transition:color 0.2s var(--ease)}
-.footer-social a:hover{color:var(--accent)}
 
 /* ---------- legal page content ---------- */
 .legal{padding:160px 0 80px}
