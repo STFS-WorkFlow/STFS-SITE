@@ -77,13 +77,17 @@ function buildWorkflow({ fileName, name, setupNote, nodes, noteWidth, noteHeight
 const knowledgeBase = `
 O STFS: Pracujemy bezpośrednio z klientem, bez warstwy pośredników. Łączymy sprzedaż, strategię i wdrożenia AI w jednym procesie. Zamiast sprzedawać modne słowa, budujemy konkretne rozwiązania: automatyzacje, które przejmują powtarzalną pracę, strony, które realnie konwertują, i wsparcie marketingu oparte na danych, nie na domysłach. Pracujemy zarówno ze startupami budującymi pierwszy produkt, jak i z firmami, które chcą przenieść swoje procesy na AI bez ryzyka i chaosu wdrożeniowego — z pełną odpowiedzialnością za efekt na każdym etapie.
 
-Usługa — Automatyzacje AI: Łączymy narzędzia firmy i modele językowe w procesy, które same kwalifikują leady, odpowiadają na zapytania i aktualizują dane bez udziału zespołu. Obejmuje: kwalifikację i scoring leadów, automatyczne odpowiedzi i follow-up, integracje CRM/e-mail/kalendarz.
+Usługa — Marketing z AI: Tworzymy materiały marketingowe gotowe do publikacji — wideo reklamowe i grafiki dopasowane pod markę klienta, bez tygodni czekania na agencję i bez stawek agencyjnych. Obejmuje: generowanie wideo marketingowego, generowanie grafik reklamowych.
 
-Usługa — Strony internetowe: Projektujemy i wdrażamy strony, które startują szybko, konwertują ruch i nie zabierają zespołowi tygodni na wdrażanie zmian. Obejmuje: landing page pod kampanie, panel do samodzielnej edycji treści, wdrożenie w 2 do 4 tygodni.
+Usługa — Strony internetowe: Budujemy strony od podstaw, dopasowane pod markę i cel klienta — sprzedaż, generowanie leadów albo prezentację oferty. Każda strona może mieć wbudowanego chatbota AI, który odpowiada klientom od razu. Obejmuje: stronę budowaną od zera pod konkretny cel, chatbota AI wbudowanego w stronę.
 
-Usługa — Wsparcie marketingu: Automatyzujemy raportowanie kampanii, generujemy treści z pomocą AI i optymalizujemy lejek sprzedażowy na podstawie danych. Obejmuje: automatyczne raporty kampanii, generowanie treści z AI, optymalizację lejków sprzedażowych.
+Usługa — Automatyzacja skrzynki Gmail: Przejmujemy powtarzalną komunikację mailową, żeby zespół klienta nie tracił godzin na pisanie tego samego po raz setny. Obejmuje: automatyczne odpisywanie na wiadomości, follow-up do leadów i klientów, generowanie wiadomości powitalnych, automatyczne przypomnienia.
 
-Usługa — Startupy dla firm: Pomagamy firmom uruchamiać nowe przedsięwzięcia z AI od pierwszej wersji produktu — od walidacji pomysłu po pierwszych klientów. Obejmuje: walidację pomysłu i MVP w tygodnie, AI wbudowane od pierwszej wersji, wsparcie w pozyskaniu klientów.
+Usługa — System rezerwacji: Klienci umawiają się sami, dostają przypomnienia i łączą się na wideorozmowę — bez telefonów ze strony właściciela firmy. Obejmuje: rezerwacje online z automatycznymi przypomnieniami, integrację z wideorozmowami.
+
+Usługa — Monitoring opinii i reputacji: Dla sieci sklepów i firm z wieloma lokalizacjami — pilnujemy opinii klientów i reagujemy, zanim problem urośnie. System wykrywa nowe opinie (pozytywne i negatywne), wysyła alert i przygotowuje gotową odpowiedź, którą właściciel zatwierdza jednym kliknięciem przed publikacją. Obejmuje: wykrywanie nowych opinii w czasie rzeczywistym, alerty o opiniach, gotową odpowiedź AI do akceptacji, pełną kontrolę nad treścią (nic nie wychodzi bez zgody klienta).
+
+Usługa — Automatyzacja arkuszy Google: Automatyzujemy pracę w arkuszach pod konkretny proces klienta, żeby nikt nie klikał tego ręcznie co tydzień. Zakres dopasowywany indywidualnie do procesu klienta.
 
 Proces współpracy: 1) Konsultacja — darmowa, 30-minutowa rozmowa ustalająca cele i zakres. 2) Diagnoza i plan — audyt strony/procesów/danych. 3) Wdrożenie — budowa strony/automatyzacji z cotygodniowym podglądem postępu. 4) Skalowanie — po starcie mierzymy dane i dokładamy kolejne automatyzacje AI.
 
