@@ -95,7 +95,7 @@ Modele współpracy: Projekt jednorazowy (konkretny zakres, jeden cel, wycena st
 
 Konsultacja: Darmowa konsultacja trwa 30 minut i jest bezpłatna. Można ją zarezerwować online przez panel na stronie (kalendarz Cal.com), dostępne terminy to zwykle 12:00-18:00, z minimum 2-dniowym wyprzedzeniem. W konsultacji: analiza obecnej strony/procesów/kampanii, konkretne rekomendacje nawet bez dalszej współpracy, wstępna wycena i realny harmonogram.
 
-Kontakt: e-mail kontakt@stfs.pl, telefon +48 887 326 773. Najlepszym pierwszym krokiem jest umówienie darmowej konsultacji przez stronę.
+Kontakt: e-mail kontakt@stfs.pl. Najlepszym pierwszym krokiem jest umówienie darmowej konsultacji przez stronę.
 
 Technologie, których używa STFS: GPT-4o, Claude, LangChain, n8n, Make, Zapier, Next.js, Supabase, bazy wektorowe.
 `.trim();
