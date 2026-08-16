@@ -145,7 +145,7 @@ if (reduceMotion) {
 
   const script = [
     { who: 'user', text: 'Cześć, jakie usługi oferuje STFS?' },
-    { who: 'ai', text: 'Cztery obszary: automatyzacje AI, strony internetowe, wsparcie marketingu i startupy dla firm.' },
+    { who: 'ai', text: 'Marketing z AI, strony internetowe, automatyzacja Gmaila, rezerwacje, monitoring opinii i arkusze Google.' },
     { who: 'user', text: 'Ile trwa i kosztuje konsultacja?' },
     { who: 'ai', text: '30 minut, całkowicie za darmo — bez zobowiązań.' },
     { who: 'user', text: 'Jak umówić termin?' },
@@ -178,7 +178,7 @@ if (reduceMotion) {
       c++;
       el.textContent = line.text.slice(0, c);
       el.appendChild(cursor);
-      body.scrollTop = body.scrollHeight;
+      body.scrollTop = 1e9;
       if (c >= line.text.length) {
         clearInterval(typeInterval);
         cursor.remove();
