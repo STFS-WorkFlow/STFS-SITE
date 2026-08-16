@@ -320,50 +320,73 @@
 
 <script src="script.js"></script>
 <script>
-  (function (C, A, L) {
-    let p = function (a, ar) { a.q.push(ar); };
-    let d = C.document;
-    C.Cal = C.Cal || function () {
-      let cal = C.Cal;
-      let ar = arguments;
-      if (!cal.loaded) {
-        cal.ns = {};
-        cal.q = cal.q || [];
-        d.head.appendChild(d.createElement('script')).src = A;
-        cal.loaded = true;
+  function loadCalEmbed() {
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement('script')).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === 'string') {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ['initNamespace', namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    Cal('init', '30min', { origin: 'https://cal.com' });
+
+    Cal.ns['30min']('inline', {
+      elementOrSelector: '#cal-inline',
+      calLink: 'kamil-piechota-se8qxt/30min',
+      config: { layout: 'month_view', theme: 'dark' },
+    });
+
+    Cal.ns['30min']('ui', {
+      theme: 'dark',
+      cssVarsPerTheme: {
+        dark: { 'cal-brand': '#35e0c1' },
+        light: { 'cal-brand': '#35e0c1' },
+      },
+      hideEventTypeDetails: false,
+      layout: 'month_view',
+    });
+  }
+
+  // Cal.com's embed script costs ~1.6s of CPU time on a throttled mobile
+  // device. The booking panel sits at the bottom of the page, so most of
+  // that cost was being paid on every page load even for visitors who
+  // never scroll that far. Load it only once the section is about to
+  // enter the viewport.
+  (function () {
+    const section = document.getElementById('konsultacja');
+    if (!section) return;
+    if (!('IntersectionObserver' in window)) {
+      loadCalEmbed();
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        loadCalEmbed();
+        io.disconnect();
       }
-      if (ar[0] === L) {
-        const api = function () { p(api, arguments); };
-        const namespace = ar[1];
-        api.q = api.q || [];
-        if (typeof namespace === 'string') {
-          cal.ns[namespace] = cal.ns[namespace] || api;
-          p(cal.ns[namespace], ar);
-          p(cal, ['initNamespace', namespace]);
-        } else p(cal, ar);
-        return;
-      }
-      p(cal, ar);
-    };
-  })(window, 'https://app.cal.com/embed/embed.js', 'init');
-
-  Cal('init', '30min', { origin: 'https://cal.com' });
-
-  Cal.ns['30min']('inline', {
-    elementOrSelector: '#cal-inline',
-    calLink: 'kamil-piechota-se8qxt/30min',
-    config: { layout: 'month_view', theme: 'dark' },
-  });
-
-  Cal.ns['30min']('ui', {
-    theme: 'dark',
-    cssVarsPerTheme: {
-      dark: { 'cal-brand': '#35e0c1' },
-      light: { 'cal-brand': '#35e0c1' },
-    },
-    hideEventTypeDetails: false,
-    layout: 'month_view',
-  });
+    }, { rootMargin: '600px 0px' });
+    io.observe(section);
+  })();
 </script>
 </body>
 </html>
