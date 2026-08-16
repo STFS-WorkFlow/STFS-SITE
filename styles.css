@@ -113,7 +113,7 @@ input,textarea{font:inherit;color:inherit}
   flex:none;width:30px;height:30px;border-radius:50%;
   background-image:url('logo_stfs.jpg');
   background-size:138% 138%;
-  background-position:51% 6%;
+  background-position:53% 6%;
   border:1.5px solid rgba(53,224,193,0.45);
   box-shadow:0 0 12px rgba(53,224,193,0.35);
 }
@@ -318,7 +318,7 @@ input,textarea{font:inherit;color:inherit}
   width:72px;height:72px;border-radius:50%;
   background-image:url('logo_stfs.jpg');
   background-size:138% 138%;
-  background-position:51% 6%;
+  background-position:53% 6%;
   border:2px solid rgba(53,224,193,0.5);
   box-shadow:0 0 30px 6px rgba(53,224,193,0.45);
 }
@@ -627,7 +627,7 @@ section{padding:88px 0}
 .chat-head-avatar{
   width:36px;height:36px;border-radius:50%;flex:none;
   background-image:url('logo_stfs.jpg');
-  background-size:138% 138%;background-position:51% 6%;
+  background-size:138% 138%;background-position:53% 6%;
   border:1.5px solid rgba(53,224,193,0.5);
   box-shadow:0 0 12px rgba(53,224,193,0.4);
 }
