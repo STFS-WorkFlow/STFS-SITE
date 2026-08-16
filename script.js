@@ -215,11 +215,11 @@ if (reduceMotion) {
   const nodes = Array.from(flow.querySelectorAll('.flow-node'));
   const lines = Array.from(flow.querySelectorAll('.flow-line'));
   const captions = [
-    'Nowy lead trafia do systemu i czeka na kwalifikację.',
-    'Agent AI analizuje zapytanie i ocenia gotowość zakupową.',
-    'Dane leada trafiają automatycznie do CRM, bez ręcznego wpisywania.',
-    'System wysyła spersonalizowany e-mail follow-up w kilka sekund.',
-    'Gotowy lead dostaje link do rezerwacji darmowej konsultacji.',
+    'Klient zostawia nową opinię — pozytywną lub negatywną.',
+    'AI analizuje treść i ocenia sentyment opinii.',
+    'AI przygotowuje gotową odpowiedź, dopasowaną do sytuacji.',
+    'Zatwierdzasz odpowiedź jednym kliknięciem — albo ją edytujesz.',
+    'Zaakceptowana odpowiedź trafia do klienta.',
   ];
 
   if (reduceMotion) return;
