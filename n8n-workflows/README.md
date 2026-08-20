@@ -13,6 +13,12 @@ Nie używa bazy wektorowej — cała wiedza o STFS (usługi, proces, konsultacja
 2. W węźle "AI: wygeneruj odpowiedź" podmień klucz API dostawcy modelu (OpenAI/Claude) w Headers.
 3. Skopiuj Production URL webhooka i wklej w `stfs/script.js` jako `N8N_CHAT_WEBHOOK_URL`.
 
+## Monitoring opinii i reputacji (szkielet testowalny, nie produkcyjny)
+
+`monitoring-opinii-odpowiedzi.json` to dokładniejszy, testowalny szkielet dla usługi "Monitoring opinii i reputacji" opisanej na stronie — dokładniejszy niż `29-ecommerce-odpowiedzi-na-opinie.json` z katalogu poniżej. Przyjmuje opinię (webhook), AI ocenia sentyment i pisze projekt odpowiedzi, wynik wraca w odpowiedzi HTTP jako gotowy do akceptacji — **nic nie publikuje automatycznie**, zgodnie z tym co obiecujemy na stronie.
+
+Nie mamy dostępu do żadnej realnej lokalizacji Google z opiniami, więc testuje się to ręcznie wysłanym payloadem (curl/Postman/tryb testowy webhooka w n8n) — dokładna instrukcja jest w żółtej notatce w samym pliku. Podłączenie prawdziwego API platformy z opiniami (Google Business Profile, Allegro itd.) następuje dopiero per konkretny klient, który ma tam swoje konto.
+
 ## Jak zaimportować
 
 1. Otwórz n8n → **Workflows → Import from File**.
